@@ -57,10 +57,14 @@ Partial Class Form1
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbUsername = New System.Windows.Forms.ComboBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnPassword = New System.Windows.Forms.Button()
         Me.lblPassword = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CUSTOMER_DETAILSTableAdapter = New SHOP_INVENTORY_MANAGEMENT.SHOP_INVENTORYDataSetTableAdapters.CUSTOMER_DETAILSTableAdapter()
@@ -78,13 +82,11 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CUSTOMER_DETAILSBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.cmbUsername = New System.Windows.Forms.ComboBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         CUSTOMER_IDLabel = New System.Windows.Forms.Label()
         TITTLELabel = New System.Windows.Forms.Label()
         FIRST_NAMELabel = New System.Windows.Forms.Label()
@@ -364,7 +366,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(545, 356)
+        Me.TabPage2.Size = New System.Drawing.Size(545, 151)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "PRODUCT DETAILS"
         '
@@ -374,7 +376,7 @@ Partial Class Form1
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(545, 356)
+        Me.TabPage3.Size = New System.Drawing.Size(545, 151)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "PRODUCT ORDER"
         '
@@ -384,7 +386,7 @@ Partial Class Form1
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(545, 356)
+        Me.TabPage4.Size = New System.Drawing.Size(545, 151)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "PRODUCT CATALOGUE"
         '
@@ -402,9 +404,31 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(661, 521)
+        Me.GroupBox1.Size = New System.Drawing.Size(661, 208)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'cmbUsername
+        '
+        Me.cmbUsername.FormattingEnabled = True
+        Me.cmbUsername.Location = New System.Drawing.Point(124, 47)
+        Me.cmbUsername.Name = "cmbUsername"
+        Me.cmbUsername.Size = New System.Drawing.Size(121, 21)
+        Me.cmbUsername.TabIndex = 3
+        '
+        'txtUsername
+        '
+        Me.txtUsername.Location = New System.Drawing.Point(124, 80)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(121, 20)
+        Me.txtUsername.TabIndex = 2
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(124, 124)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(121, 20)
+        Me.txtPassword.TabIndex = 2
         '
         'btnExit
         '
@@ -441,6 +465,15 @@ Partial Class Form1
         Me.lblPassword.Size = New System.Drawing.Size(51, 13)
         Me.lblPassword.TabIndex = 0
         Me.lblPassword.Text = "Passeord"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(40, 47)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(62, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Department"
         '
         'lblUsername
         '
@@ -480,7 +513,7 @@ Partial Class Form1
         Me.CUSTOMER_DETAILSBindingNavigator.BindingSource = Me.CUSTOMER_DETAILSBindingSource
         Me.CUSTOMER_DETAILSBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.CUSTOMER_DETAILSBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.CUSTOMER_DETAILSBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.CUSTOMER_DETAILSBindingNavigatorSaveItem})
+        Me.CUSTOMER_DETAILSBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.CUSTOMER_DETAILSBindingNavigatorSaveItem, Me.ToolStripSeparator1, Me.ToolStripTextBox1})
         Me.CUSTOMER_DETAILSBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.CUSTOMER_DETAILSBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.CUSTOMER_DETAILSBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -586,37 +619,6 @@ Partial Class Form1
         Me.CUSTOMER_DETAILSBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CUSTOMER_DETAILSBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'cmbUsername
-        '
-        Me.cmbUsername.FormattingEnabled = True
-        Me.cmbUsername.Location = New System.Drawing.Point(124, 47)
-        Me.cmbUsername.Name = "cmbUsername"
-        Me.cmbUsername.Size = New System.Drawing.Size(121, 21)
-        Me.cmbUsername.TabIndex = 3
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(124, 124)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(121, 20)
-        Me.txtPassword.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(40, 47)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Department"
-        '
-        'txtUsername
-        '
-        Me.txtUsername.Location = New System.Drawing.Point(124, 80)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(121, 20)
-        Me.txtUsername.TabIndex = 2
-        '
         'TabControl2
         '
         Me.TabControl2.Controls.Add(Me.TabPage6)
@@ -644,15 +646,26 @@ Partial Class Form1
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(572, 166)
+        Me.TabPage8.Size = New System.Drawing.Size(572, 23)
         Me.TabPage8.TabIndex = 3
         Me.TabPage8.Text = "PRODUCT CATALOGUE"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripTextBox1
+        '
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(804, 581)
+        Me.ClientSize = New System.Drawing.Size(804, 596)
         Me.Controls.Add(Me.CUSTOMER_DETAILSBindingNavigator)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
@@ -731,4 +744,6 @@ Partial Class Form1
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage6 As TabPage
     Friend WithEvents TabPage8 As TabPage
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
 End Class
